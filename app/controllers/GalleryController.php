@@ -4,7 +4,16 @@ class GalleryController extends BaseController {
 
     public function index()
     {
-        return View::make('gallery');
+        $videos = Video::all();
+
+        $data['videos'] = $videos;
+
+        foreach ( $videos as $video )
+        {
+
+        }
+
+        return View::make( 'gallery', $data );
     }
 
 }
