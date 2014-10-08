@@ -56,7 +56,7 @@ return array(
 			'driver'    => 'mysql',
 			'host'      => '104.131.113.86',
 			'database'  => 'gamersmedia',
-			'username'  => 'root',
+			'username'  => 'root2',
 			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
