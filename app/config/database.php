@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => '104.131.113.86',
-			'database'  => 'GAMERSMEDIA',
+			'database'  => 'gamersmedia',
 			'username'  => 'root',
-			'password'  => '',
+			'password'  => 'secret',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
