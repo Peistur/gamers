@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '104.131.113.86',
+			'host'      => 'localhost',
 			'database'  => 'gamersmedia',
 			'username'  => 'forge',
-			'password'  => 'QoTaveb7sXcw1pkpcc6x',
+			'password'  => '4mDNzol0A3HH08WkNqKg',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
