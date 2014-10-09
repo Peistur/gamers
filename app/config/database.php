@@ -55,9 +55,9 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'forge',
+			'database'  => 'gamersmedia',
 			'username'  => 'forge',
-			'password'  => '',
+			'password'  => 'QoTaveb7sXcw1pkpcc6x',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
