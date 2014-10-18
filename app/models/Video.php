@@ -21,6 +21,30 @@ class Video extends Eloquent implements UserInterface, RemindableInterface {
      *
      * @var array
      */
-    protected $hidden = array('password', 'remember_token');
+    protected $hidden = array();
 
+    public function game()
+    {
+        return $this->belongsTo('Game');
+    }
+
+    public function category()
+    {
+        return $this->belongsTo('Category');
+    }
+
+    public function language()
+    {
+        return $this->belongsTo('Language');
+    }
+
+    public function collection()
+    {
+        return $this->belongsTo('Collection');
+    }
+
+    public function subcollection()
+    {
+        return $this->belongsTo('Subcollection');
+    }
 }

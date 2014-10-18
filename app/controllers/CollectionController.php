@@ -1,6 +1,6 @@
 <?php
 
-class GalleryController extends SharedController {
+class CollectionController extends SharedController {
 
     public function index( $name = null )
     {
@@ -9,15 +9,16 @@ class GalleryController extends SharedController {
         if( $game )
         {
             //$data['videos'] = Video::where( 'game_id', '=', $game->id )->take( 9 )->get();
-            $this->data['videos'] = Video::where( 'game_id', '=', $game->id )->paginate( 6 );
+            //$this->data['videos'] = Video::where( 'game_id', '=', $game->id )->paginate( 6 );
+            $this->data['collections'] = Collection::where( 'game_id', '=', $game->id );
         }
         else
         {
             //$data['videos'] = Video::all();
-            $this->data['videos'] = Video::paginate( 6 );
+            $this->data['collections'] = null;
         }
 
-        return View::make( 'gallery', $this->data );
+        return View::make( 'list', $this->data );
     }
 
 }

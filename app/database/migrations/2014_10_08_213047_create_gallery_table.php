@@ -12,6 +12,8 @@ class CreateGalleryTable extends Migration {
 	 */
 	public function up()
 	{
+        Schema::dropIfExists('video');
+
         Schema::create('video', function($table)
         {
             $table->increments('id');

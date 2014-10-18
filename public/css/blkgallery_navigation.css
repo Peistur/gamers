@@ -7,9 +7,8 @@
 #topnav{
 	display:block;
 	position:absolute;
-	top:45px;
+	bottom:0px;
 	left:0;
-	width:630px;
 	height:45px;
 	color:#FFFFFF;
 	font-weight:bold;
@@ -47,8 +46,8 @@
 	float:none;
 	margin:0;
 	padding:7px 10px;
-	font-size:12px;
-	font-weight:normal;
+	font-size:14px;
+	font-weight:bold;
 	color:#6A6A6A;
 	background-color:#FFFFFF;
 	}

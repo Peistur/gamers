@@ -10,13 +10,28 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+Route::get('/', array( 'as' => 'home', 'uses' => 'HomeController@index' ) );
 
-Route::get('gallery', 'GalleryController@index');
+Route::get('gallery/{name?}', 'GalleryController@index');
 
-Route::get('/', function()
+Route::get('video/{id}', 'VideoController@index');
+
+Route::get('list/{name?}', 'ListController@index');
+
+Route::get('video/insert/', 'VideoController@insert');
+
+
+Route::group(array('prefix' => 'video'), function()
 {
-	return View::make('hello');
+
+    Route::get( 'update/{id?}', array( 'as' => 'video.update', 'uses' => 'VideoController@update' ) );
+
+    Route::get( 'insert/', array( 'as' => 'videoinsert', 'uses' => 'VideoController@insert' ) );
+
 });
+
+
+// Test.
 
 Route::get('users', function()
 {
@@ -26,5 +41,5 @@ Route::get('users', function()
     $users = User::where('name','victor')->take(10)->get();
 
     return View::make('users')->with('users', $users);
-    die('test2');
+
 });

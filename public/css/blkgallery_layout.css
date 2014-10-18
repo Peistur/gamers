@@ -56,9 +56,11 @@ ol { margin: 1.5em 0em; padding-left:1.5em; line-height:1.5; }
 /* ******************************************************************** */ 
 
 #header{
- height:100px;
  position:relative;
- height:90px;
+ height:140px;
+    background-image: url('../img/header2.jpg');
+    background-repeat: no-repeat;
+    background-size: 980px 440px;
 } 
  
  #header h1, #header p, #header ul, #header a{
@@ -141,6 +143,7 @@ ol { margin: 1.5em 0em; padding-left:1.5em; line-height:1.5; }
 	border:1px solid #cccccc;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-size:10px;
+    position:relative;
 	}
 
 #gallery li.last{margin-right:0;}
@@ -171,9 +174,9 @@ ol { margin: 1.5em 0em; padding-left:1.5em; line-height:1.5; }
 /*                  	pagination				 		            */
 /* ******************************************************************** */
 
-.pagination{
+/*.pagination{
 	font:Arial, Helvetica, sans-serif;
-	font-size:10px;
+	font-size:12px;
 	display:block;
 	margin:10px 0 0 0;
 	padding:0;
@@ -231,6 +234,63 @@ ol { margin: 1.5em 0em; padding-left:1.5em; line-height:1.5; }
 	list-style:none;
 	}
 
+.pagination li.active{
+    width: 20px;
+}
+
+.pagination li.disable{
+    width: 20px;
+}*/
+
+.pagination {
+    width:602px;
+    margin:5px auto;
+    padding:0px;
+    text-align:center;
+    color:#aaa;
+
+}
+.pagination a {
+    padding:7px;
+    text-decoration:none;
+    color:#667F99;
+}
+.pagination li.active a {
+    font-weight:bold;
+}
+.pagination li:not(.disabled) a:hover {
+    border:1px solid #ddd;
+    border-radius:5px;
+    color:#000;
+    padding:10px 6px;
+    background:#666;
+    background-image:-webkit-linear-gradient(top, #fcfcfc, #eaeaea);
+    background-image:-moz-linear-gradient(top, #fcfcfc, #eaeaea);
+    background-image:-o-linear-gradient(top, #fcfcfc, #eaeaea);
+    background-image:-ms-linear-gradient(top, #fcfcfc, #eaeaea);
+}
+
+.pagination li
+{
+    display: inline;
+    list-style-type: none;
+}
+
+.pagination ul
+{
+    margin: 0px 0px;
+    padding: 0 0px;
+}
+
+.pagination  li.disabled a:hover {
+    pointer-events: none;
+    cursor: default;
+}
+
+.pagination  li.disabled a {
+    color: #B6B8BB;
+}
+
 
  /* ******************************************************************** */ 
 /*                  	BreadCrumb					 		            */
@@ -272,7 +332,7 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .bgrow3{color:#e2e2e2; background-color:#2b2b2b; }
 .bgrow3 a{color:#ff9900; background-color:#2b2b2b; }
 .bgrow4{color:#e2e2e2; background-color:#2b2b2b;}
-.bgrow4 a{color:#ff9900; background-color:#2b2b2b;}
+.bgrow4 a{color:#ff9900; }
 .bgrow4 a:hover{color:#3c5065;}
 .bgrow5{color:#ebebeb; background-color:#000000;}
 .bgrow5 a{color:#ff9900; background-color:#000000;}
