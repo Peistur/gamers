@@ -88,7 +88,7 @@ class CreateDb3 extends Migration {
                     'category_id' => 1,
                     'language_id' => 1,
                     'collection_id' => 1,
-                    'sub_collection_id' => 1
+                    'subcollection_id' => 1
                 ),
                 array(
                     'title' => 'Quarter final - Kolento vs Ekop - Game 2',
@@ -98,7 +98,7 @@ class CreateDb3 extends Migration {
                     'category_id' => 1,
                     'language_id' => 1,
                     'collection_id' => 1,
-                    'sub_collection_id' => 1
+                    'subcollection_id' => 1
                 ),
                 array(
                     'title' => 'Quarter final - Kolento vs Ekop - Game 3',
@@ -108,7 +108,7 @@ class CreateDb3 extends Migration {
                     'category_id' => 1,
                     'language_id' => 1,
                     'collection_id' => 1,
-                    'sub_collection_id' => 1
+                    'subcollection_id' => 1
                 ),
                 array(
                     'title' => 'Quarter final - Kolento vs Ekop - Game 4',
@@ -118,7 +118,7 @@ class CreateDb3 extends Migration {
                     'category_id' => 1,
                     'language_id' => 1,
                     'collection_id' => 1,
-                    'sub_collection_id' => 1
+                    'subcollection_id' => 1
                 ),
                 array(
                     'title' => 'Quarter final - Kolento vs Ekop - Game 5',
@@ -128,7 +128,7 @@ class CreateDb3 extends Migration {
                     'category_id' => 1,
                     'language_id' => 1,
                     'collection_id' => 1,
-                    'sub_collection_id' => 1
+                    'subcollection_id' => 1
                 ),
             )
         );
