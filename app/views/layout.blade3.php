@@ -44,7 +44,26 @@
 
     <div class="content">
 
-        @yield('content')
+        <div class="wrapper">
+            <div class="main-content left">
+                <div class="panel-block">
+                    <div class="panel-title">
+                        <h2>Últimos videos</h2>
+                    </div>
+                    <div class="article-box">
+
+                        @if ( $videos )
+                        @foreach ( $videos as $video )
+                        <a href="{{ URL::action( 'VideoController@index', $video->id ) }}">
+                            <img src="http://img.youtube.com/vi/{{ $video->youtubeId }}/0.jpg" alt="" width="300" height="220" />
+                        </a>
+                        @endforeach
+                        @endif
+
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 

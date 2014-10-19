@@ -1,0 +1,442 @@
+body {
+    font-size: 13px;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #a9a9a9;
+    background: url(../img/background.jpg) no-repeat fixed top center;
+    background-size: 100%;
+    background-color: #1a1a1a;
+}
+
+.layout {
+    width:1245px;
+    margin:0px auto;
+    background:#0b0b0b;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow:0 0px 10px rgba(0,0,0,0.2);
+    padding:0px;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+.active.boxed {
+    width:1245px;
+    margin:0px auto;
+    background:#0b0b0b;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow:0 0px 10px rgba(0,0,0,0.2);
+    padding:0px;
+    min-height: 100%;
+    max-width: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+}
+
+.header .logo a {
+    height: 150px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header .logo img {
+    display: inline-block;
+}
+
+/** --------------------- Menu ------------------------- **/
+
+#menu {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+    list-style: none;
+    background-color: #111;
+    background-image: linear-gradient(#444, #111);
+    /*border-radius: 50px;
+    box-shadow: 0 2px 1px #9c9c9c;*/
+}
+
+#menu li {
+    float: left;
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+#menu a {
+    float: left;
+    height: 25px;
+    padding: 0 25px;
+    color: #999;
+    text-transform: uppercase;
+    font: bold 16px/25px Arial, Helvetica;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+}
+
+#menu li:hover > a {
+    color: #fafafa;
+}
+
+*html #menu li a:hover { /* IE6 */
+    color: #fafafa;
+}
+
+#menu li:hover > ul {
+    display: block;
+}
+
+/* Sub-menu */
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 99999;
+    background-color: #444;
+    background-image: linear-gradient(#444, #111);
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#menu ul li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-shadow: 0 1px 0 #111111,
+    0 2px 0 #777777;
+}
+
+#menu ul li:last-child {
+    box-shadow: none;
+}
+
+#menu ul a {
+    padding: 10px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+*html #menu ul a { /* IE6 */
+    height: 10px;
+    width: 150px;
+}
+
+*:first-child+html #menu ul a { /* IE7 */
+    height: 10px;
+    width: 150px;
+}
+
+#menu ul a:hover {
+    background-color: #0186ba;
+    background-image: linear-gradient(#04acec, #0186ba);
+}
+
+#menu ul li:first-child a {
+    border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:first-child a:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after {
+    border-bottom-color: #04acec;
+}
+
+#menu ul li:last-child a {
+    border-radius: 0 0 5px 5px;
+}
+
+/* Clear floated elements */
+#menu:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+/** --------------------- Menu ------------------------- **/
+
+.wrapper {
+    width:1200px;
+    margin:0px auto;
+    position:relative;
+    display: block;
+    padding-bottom: 30px;
+}
+
+.header .wrapper {
+    padding-bottom: 0px;
+}
+
+.left {
+    float:left;
+}
+
+/** ------------ Content -------------- **/
+
+.content {
+    background: url(../images/footer-bg.png) no-repeat center bottom;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.content .main-content {
+    display: block;
+    width: 820px;
+}
+
+.content .main-content.full-width {
+    display: block;
+    width: 100%;
+}
+
+.content .panel-block.double-panel {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.content .panel-block.double-panel > div {
+    display: block;
+    width: 400px;
+}
+
+.footer .panel-block {
+    display: block;
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.footer .panel-block .panel-title {
+    display: block;
+    color: #fff;
+    position: relative;
+    border-bottom: 1px dotted #353535;
+    margin-bottom: 20px;
+}
+
+.footer .panel-block .panel-title h2 {
+    display: inline-block;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: 'Montserrat', sans-serif;
+    background: url(../images/explore-icon.png) no-repeat center right;
+    color: #d7d7d7;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.content .panel-block {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.content .panel-block .panel-title {
+    display: block;
+    background: #462815;
+    color: #fff;
+    position: relative;
+}
+
+.content .panel-block .panel-title h2 {
+    display: block;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: normal;
+    font-family: 'Montserrat';
+    margin-bottom: 0px;
+    color: #fff;
+}
+
+.content .panel-block .panel-title div.right {
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 10px 15px;
+    font-size: 11px;
+    line-height: 19px;
+    color: #fff;
+}
+
+.content .panel-block .panel-title div.right > a {
+    color: #fff;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+}
+
+.content .panel-block .panel-title div.right li.active a,
+.content .panel-block .panel-title div.right a:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+.content .panel-block .panel-title div.right ul {
+    font-size: 0;
+}
+
+.content .panel-block .panel-title div.right li {
+    display: inline-block;
+}
+
+.content .panel-block .panel-title div.right li a {
+    color: transparent;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    line-height: 100%;
+    font-size: 1;
+    display: block;
+    margin-left: 3px;
+    margin-right: 4px;
+    margin-top: 4px;
+}
+
+.article-box {
+    display: block;
+    background: #1f1f1f;
+    padding: 20px;
+}
+
+.article-box h1 {
+    font-size: 30px;
+}
+
+.article-box h2 {
+    font-size: 23px;
+}
+
+.article-box h3 {
+    font-size: 19px;
+}
+
+.article-box h4 {
+    font-size: 16px;
+}
+
+.article-box h5 {
+    font-size: 14px;
+}
+
+.article-box h6 {
+    font-size: 13px;
+}
+
+.article-box p {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.article-box .video-container {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.article-box .spacers.spacer-style-1 {
+    display: block;
+    height: 4px;
+    background-color: #333333;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #3b3b3b;
+    position: relative;
+}
+
+.article-box .spacers.spacer-style-1:before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #1f1f1f;
+    left: 0px;
+    top: 1px;
+    position: absolute;
+    z-index: 1;
+}
+
+.article-box .spacers.spacer-style-1 .icon-text,
+.article-box .spacers.spacer-style-2 .icon-text {
+    display: inline-block;
+    font-size: 19px;
+    line-height: 100%;
+    margin-top: -8px;
+    background: #1f1f1f;
+    padding: 0px 20px;
+    cursor: default;
+    z-index: 2;
+    position: relative;
+}
+
+.article-box .spacers.spacer-style-2 {
+    display: block;
+    height: 5px;
+    background-image: url(../images/spacer-2.png);
+    background-repeat: repeat-x;
+    background-position: center top;
+    background-color: #333333;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #3b3b3b;
+}
+
+.panel-content .video-item {
+    display: inline-block;
+    width: 260px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.panel-content .video-item:nth-child(3n+0) {
+    margin-right: 0px;
+}
+
+.panel-content .video-item h2 {
+    font-size: 17px;
+    margin-top: 8px;
+}
+
+.panel-content .video-item-2 {
+    display: inline-block;
+    width: 32.5%;
+    margin: 2px;
+
+}
+
+
+.panel-content .video-item-2 h2 {
+    font-size: 17px;
+}

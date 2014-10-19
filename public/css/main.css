@@ -1,34 +1,302 @@
-.right{
-    float:right;
+body {
+    font-size: 13px;
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #a9a9a9;
+    background: url(../img/background.jpg) no-repeat fixed top center;
+    background-size: 100%;
+    background-color: #1a1a1a;
 }
 
-.absolute{
-    top:10px;
+.layout {
+    width:1245px;
+    margin:0px auto;
+    padding:0px;
+    min-height: 100%;
+    max-width: 100%;
 }
 
-.box1{
-    width: 284px;
-    height: 50px;
+.clear {
+    clear: both;
+}
+
+.header {
+    background:#0b0b0b;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow:0 0px 10px rgba(0,0,0,0.2);
+}
+
+.header .logo {
+    display: block;
+    float: left;
+}
+
+.header .logo a {
+    height: 150px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.header .logo img {
+    display: inline-block;
+}
+
+/** --------------------- Menu ------------------------- **/
+
+#menu {
+    width: 100%;
+    margin: 0;
+    padding: 10px 0 0 0;
+    list-style: none;
+    background-color: #111;
+    background-image: linear-gradient(#444, #111);
+    /*border-radius: 50px;
+    box-shadow: 0 2px 1px #9c9c9c;*/
+}
+
+#menu li {
+    float: left;
+    padding: 0 0 10px 0;
+    position: relative;
+}
+
+#menu a {
+    float: left;
+    height: 25px;
+    padding: 0 25px;
+    color: #999;
+    text-transform: uppercase;
+    font: bold 16px/25px Arial, Helvetica;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #000;
+}
+
+#menu li:hover > a {
+    color: #fafafa;
+}
+
+*html #menu li a:hover { /* IE6 */
+    color: #fafafa;
+}
+
+#menu li:hover > ul {
+    display: block;
+}
+
+/* Sub-menu */
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 99999;
+    background-color: #444;
+    background-image: linear-gradient(#444, #111);
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#menu ul li {
+    float: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-shadow: 0 1px 0 #111111,
+    0 2px 0 #777777;
+}
+
+#menu ul li:last-child {
+    box-shadow: none;
+}
+
+#menu ul a {
+    padding: 10px;
+    height: auto;
+    line-height: 1;
+    display: block;
+    white-space: nowrap;
+    float: none;
+    text-transform: none;
+}
+
+*html #menu ul a { /* IE6 */
+    height: 10px;
+    width: 150px;
+}
+
+*:first-child+html #menu ul a { /* IE7 */
+    height: 10px;
+    width: 150px;
+}
+
+#menu ul a:hover {
+    background-color: #0186ba;
+    background-image: linear-gradient(#04acec, #0186ba);
+}
+
+#menu ul li:first-child a {
+    border-radius: 5px 5px 0 0;
+}
+
+#menu ul li:first-child a:after {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 8px solid #444;
+}
+
+#menu ul li:first-child a:hover:after {
+    border-bottom-color: #04acec;
+}
+
+#menu ul li:last-child a {
+    border-radius: 0 0 5px 5px;
+}
+
+/* Clear floated elements */
+#menu:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html #menu             { zoom: 1; } /* IE6 */
+*:first-child+html #menu { zoom: 1; } /* IE7 */
+
+/** --------------------- Menu ------------------------- **/
+
+.content {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    padding: 30px 22.5px 40px;
+    width: 1200px;
+    background:#0b0b0b;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow:0 0px 10px rgba(0,0,0,0.2);
+    position: relative;
+    float: left;
+}
+
+.content-left {
+    width: 820px;
+    position: relative;
+    float: left;
+}
+
+.panel {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    float: left;
+}
+
+.panel .title {
+    display: block;
+    background: rgba(222, 104, 104, 0.6);
+    color: #fff;
+    position: relative;
+    float:left;
+    width: 100%;
+}
+
+.panel .title h2 {
+    display: block;
+    padding: 0px 15px;
+    font-size: 17px;
+    font-weight: normal;
+    color: #fff;
+}
+
+.panel .box {
+    display: block;
+    background: #1f1f1f;
+    padding: 3%;
+    position: relative;
+    float:left;
+    width: 94%;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+
+.content-right {
+    width: 360px;
+    position: relative;
+    float: right;
+}
+
+.gallery {
+    position: relative;
+    float: right;
+    width: 100%;
+}
+
+.gallery li {
+    position: relative;
+    float: left;
+    box-shadow: 5px 5px 20px #000000;
+    width: 330px;
+    margin: 12px 10px;
+}
+
+.gallery .info {
+    width: 310px;
     font-size: 12px;
-    padding:8px;
-    position:relative;
+    padding: 10px;
+    position: relative;
+    float: left;
 }
 
-.title{
-    top:10px;
-    width: 170px;
-    height: 30px;
+.gallery .name {
+    position: relative;
+    float: left;
+    padding: 10px 10px;
+    text-align: center;
+    width: 310px;
+    font-size: 16px;
 }
 
-.viewvideo{
+.gallery .video-img {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+
+.gallery .description {
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.gallery .collection-link {
+    position: relative;
+    float: left;
+    width: 180px;
+    padding: 10px;
+}
+
+.gallery .collection-link a {
+    color: rgba(222, 104, 104, 1);
+    font-size: 14px;
+}
+
+.gallery .game-logo {
     position: absolute;
+
     bottom: 10px;
-    font-weight: bold;
-    background-color: #4a4a4a;
-}
-
-.logo{
-    top: 10px;
     right: 10px;
-    position: absolute;
+
 }
