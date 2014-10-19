@@ -35,6 +35,26 @@ class GalleryController extends SharedController {
                     'subcollections'
                 ]
             )->where( 'game_id', '=', $game->id )->get();
+
+            $collections = Collection::with(
+                [
+                    'subcollections'
+                ]
+            )->where( 'game_id', '=', $game->id )->get();
+
+            $i = 0;
+
+            foreach ( $collections as $collection )
+            {
+                $videos = Video::with(
+                    [
+                        'subcollection'
+                    ]
+                )->where( 'collection_id', '=', $collection->id )->take(4)->get();
+
+                $this->data['collections'][$i]->videos = $videos;
+                $i++;
+            }
         }
         else
         {
