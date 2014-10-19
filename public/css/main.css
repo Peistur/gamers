@@ -30,6 +30,8 @@ body {
 .header .logo {
     display: block;
     float: left;
+    position: relative;
+    margin-left: 30px;
 }
 
 .header .logo a {
@@ -229,6 +231,13 @@ body {
     background: rgba(0, 0, 0, 0.2);
 }
 
+.box ul li a {
+    color: rgba(222, 104, 104, 1);
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 150%;
+    text-decoration: none;
+}
 
 .content-right {
     width: 360px;
@@ -251,9 +260,9 @@ body {
 }
 
 .gallery .info {
-    width: 310px;
+    width: 304px;
     font-size: 12px;
-    padding: 10px;
+    padding: 13px;
     position: relative;
     float: left;
 }
@@ -281,16 +290,23 @@ body {
     font-size: 14px;
 }
 
+.gallery .foot {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 50px;
+}
+
 .gallery .collection-link {
     position: relative;
     float: left;
     width: 180px;
-    padding: 10px;
 }
 
 .gallery .collection-link a {
     color: rgba(222, 104, 104, 1);
     font-size: 14px;
+    font-weight: bold;
 }
 
 .gallery .game-logo {

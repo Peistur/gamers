@@ -2,23 +2,56 @@
 
 class CollectionController extends SharedController {
 
-    public function index( $name = null )
+    public function index( $collectionName = null )
     {
-        $game = Game::where( 'name', '=', $name )->first();
+        $collection = Collection::where( 'name', '=', $collectionName )->first();
 
-        if( $game )
+        if( $collection )
         {
-            //$data['videos'] = Video::where( 'game_id', '=', $game->id )->take( 9 )->get();
-            //$this->data['videos'] = Video::where( 'game_id', '=', $game->id )->paginate( 6 );
-            $this->data['collections'] = Collection::where( 'game_id', '=', $game->id );
+            $this->data['subcollections'] = $this->_getSubcollections( $collection->id );
         }
         else
         {
             //$data['videos'] = Video::all();
-            $this->data['collections'] = null;
+            //$this->data['collections'] = null;
+
+            Redirect::to('home');
         }
 
-        return View::make( 'list', $this->data );
+        return View::make( 'collection', $this->data );
+    }
+
+    public function subcollection( $collectionName = null, $subcollectionName = null )
+    {
+        $subcollection = Subcollection::with(
+            [
+                'collection'
+            ]
+        )->where( 'name', '=', $subcollectionName )->first();
+
+        if ( $subcollection->collection->name == $collectionName )
+        {
+            $this->data['videos'] = Video::whereSubcollection_id( $subcollection->id )->get();
+
+            $this->data['subcollection'] = $subcollection;
+
+            $this->data['subcollections'] = $this->_getSubcollections( $subcollection->collection->id );
+        }
+
+        return View::make( 'subcollection', $this->data );
+    }
+
+    private function _getSubcollections( $collectionId )
+    {
+        return Subcollection::with(
+            [
+                'videos' => function( $video )
+                    {
+                        $video->orderBy('created_at', 'desc');
+                    },
+                'collection'
+            ]
+        )->where( 'collection_id', '=', $collectionId )->get();
     }
 
 }

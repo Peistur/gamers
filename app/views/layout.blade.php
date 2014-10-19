@@ -1,9 +1,9 @@
 <html>
 <head>
     <!--{{ HTML::style( asset('css/blkgallery_layout.css') ) }}
-    {{ HTML::style( asset('css/blkgallery_navigation.css') ) }}-->
+    {{ HTML::style( asset('css/blkgallery_navigation.css') ) }}
     {{ HTML::style( asset('css/slidorion.css') ) }}
-    {{ HTML::style( asset('css/box.css') ) }}
+    {{ HTML::style( asset('css/box.css') ) }}-->
     {{ HTML::style( asset('css/main.css') ) }}
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
@@ -20,8 +20,8 @@
 
         <div class="wrapper">
             <div class="logo">
-                <a href="">4gamers
-                    <img src="">
+                <a href="#">
+                    {{ HTML::image("img/logo.png", "Logo") }}
                 </a>
             </div>
             <div class="clear"></div>

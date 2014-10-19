@@ -14,6 +14,10 @@ Route::get('/', array( 'as' => 'home', 'uses' => 'HomeController@index' ) );
 
 Route::get('gallery/{name?}', 'GalleryController@index');
 
+Route::get('collection/{collectionName?}', 'CollectionController@index');
+
+Route::get('collection/{collectionName?}/{subcollectionName?}', 'CollectionController@subcollection');
+
 Route::get('video/{id}', 'VideoController@index');
 
 Route::get('list/{name?}', 'ListController@index');
