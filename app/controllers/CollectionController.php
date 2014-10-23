@@ -22,7 +22,7 @@ class CollectionController extends SharedController {
     }
 
     public function subcollection( $collectionName = null, $subcollectionName = null )
-    {
+    {die('hola');
         $subcollection = Subcollection::with(
             [
                 'collection'
