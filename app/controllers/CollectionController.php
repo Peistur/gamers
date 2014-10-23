@@ -28,7 +28,7 @@ class CollectionController extends SharedController {
                 'collection'
             ]
         )->where( 'name', '=', $subcollectionName )->first();
-var_dump($subcollection);die();
+
         if ( $subcollection->collection->name == $collectionName )
         {
             $this->data['videos'] = Video::whereSubcollection_id( $subcollection->id )->get();
