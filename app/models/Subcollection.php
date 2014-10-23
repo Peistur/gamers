@@ -30,6 +30,6 @@ class Subcollection extends Eloquent implements UserInterface, RemindableInterfa
 
     public function collection()
     {
-        return $this->belongsTo('collection');
+        return $this->belongsTo('Collection');
     }
 }
