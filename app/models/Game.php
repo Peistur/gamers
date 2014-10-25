@@ -32,9 +32,4 @@ class Game extends Eloquent implements UserInterface, RemindableInterface {
     {
         return $this->hasMany( 'Collection' );
     }
-
-    public function subcollections()
-    {
-        return $this->hasManyThrough('Post', 'User');
-    }
 }

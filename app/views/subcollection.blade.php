@@ -18,27 +18,29 @@
                     @foreach ( $videos as $video )
 
                     <li>
-                        <div class="name">{{ $video->title }}</div>
                         <div class="video-img">
                             <a href="{{ URL::action( 'VideoController@index', $video->id ) }}">
                                 <img src="http://img.youtube.com/vi/{{ $video->youtubeId }}/0.jpg" alt="" width="330" height="242" />
                             </a>
                         </div>
+                        <div class="name">{{ $video->title }}</div>
 
                         <div class="info">
 
                             <div class="description">{{ $video->description }}</div>
-                            <div class="collection-link">
-                                @if ( !is_null( $video->collection ) )
-                                <a class="viewproject" href="{{ URL::action( 'VideoController@index', $video->collection->name ) }}">
-                                    {{ $video->subcollection->name }} &raquo;
-                                </a>
-                                @endif
-                            </div>
-                            <div class="game-logo">
-                                <a href="{{ URL::action( 'GalleryController@index', $video->game->name ) }}">
-                                    {{ HTML::image("img/".$video->game->image, "Logo") }}
-                                </a>
+                            <div class="foot">
+                                <div class="collection-link">
+                                    @if ( !is_null( $video->collection ) )
+                                    <a class="viewproject" href="{{ URL::action( 'CollectionController@index', $video->collection->name ) }}">
+                                        {{ $video->subcollection->name }} &raquo;
+                                    </a>
+                                    @endif
+                                </div>
+                                <div class="game-logo">
+                                    <a href="{{ URL::action( 'GalleryController@index', $video->game->name ) }}">
+                                        {{ HTML::image("img/".$video->game->image, "Logo") }}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </li>

@@ -15,4 +15,6 @@ return array(
 
 	'debug' => true,
 
+    'url' => 'http://localhost/laravel/4gamers/laravel/public',
+
 );

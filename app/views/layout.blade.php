@@ -26,7 +26,7 @@
             </div>
             <div class="clear"></div>
             <ul id="menu">
-                <li><a href="#">Home</a></li>
+                <li><a href="{{ URL::action( 'HomeController@index' ) }}">Home</a></li>
                 <li>
                     <a href="#">Games</a>
                     <ul>
