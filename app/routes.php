@@ -12,19 +12,24 @@
 */
 Route::get('/', array( 'as' => 'home', 'uses' => 'HomeController@index' ) );
 
-Route::get('gallery/{name?}', 'GalleryController@index');
+Route::get('game/{name?}', 'GameController@index');
 
 Route::get('collection/{collectionName?}', 'CollectionController@index');
 
 Route::get('collection/{collectionName?}/{subcollectionName?}', 'CollectionController@subcollection');
 
-Route::get('video/{id}', 'VideoController@index');
+Route::get('video/create', array( 'as' => 'video.create', 'uses' => 'VideoController@create' ) );
 
-Route::get('list/{name?}', 'ListController@index');
+Route::post('video/insert', array( 'as' => 'video.insert', 'uses' => 'VideoController@insert' ) );
 
-Route::get('video/insert/', 'VideoController@insert');
+Route::get('video/show/{id}', array( 'as' => 'video.show', 'uses' => 'VideoController@show' ) );
 
 
+
+
+
+
+/*
 Route::group(array('prefix' => 'video'), function()
 {
 
@@ -32,18 +37,4 @@ Route::group(array('prefix' => 'video'), function()
 
     Route::get( 'insert/', array( 'as' => 'videoinsert', 'uses' => 'VideoController@insert' ) );
 
-});
-
-
-// Test.
-
-Route::get('users', function()
-{
-
-    $users = User::all();
-
-    $users = User::where('name','victor')->take(10)->get();
-
-    return View::make('users')->with('users', $users);
-
-});
+});*/

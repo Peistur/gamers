@@ -17,6 +17,12 @@ body {
     max-width: 100%;
 }
 
+.wrapper {
+    float: left;
+    width: 100%;
+    margin-top: 30px;
+}
+
 .clear {
     clear: both;
 }
@@ -32,12 +38,11 @@ body {
     float: left;
     position: relative;
     margin-left: 30px;
+    margin-top:20px;
 }
 
 .header .logo a {
-    height: 150px;
-    display: table-cell;
-    vertical-align: middle;
+
 }
 
 .header .logo img {
@@ -329,6 +334,18 @@ body {
     right: 10px;
 }
 
+.right-logo-hots {
+    position: absolute;
+    top: -1px;
+    right: 10px;
+}
+
+.right-logo-sc2 {
+    position: absolute;
+    top: -1px;
+    right: 10px;
+}
+
 a.image-video:hover:after {
     display: block;
     position: absolute;
@@ -354,4 +371,83 @@ a.image-video:hover:before {
     position: absolute;
     background: rgba(0,0,0,0.3);
     z-index: 1;
+}
+
+
+.buble_container{
+    position:relative;
+    float:left;
+    width:100%;
+}
+
+.bubble {
+    /*clear: both;
+    margin: 0px auto;
+    background: #fff;*/
+    width: 350px;
+    -moz-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    -khtml-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 0px 0px 8px rgba(0,0,0,0.3);
+    position: relative;
+    z-index: 90; /* the stack order: displayed under ribbon rectangle (100) */
+    position: relative;
+    float: left;
+    margin: 20px 70px;
+    background: DimGrey;
+}
+
+.rectangle {
+    background: rgba(153, 82, 82, 1);
+    height: 80px;
+    width: 1275px;
+    position: relative;
+    left:-15px;
+    top: 30px;
+    float: left;
+    -moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    -webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+    z-index: 100; /* the stack order: foreground */
+}
+
+.rectangle h2 {
+    font-size: 24px;
+    color: #fff;
+    padding-top: 6px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.rectangle h2 a {
+    color: white;
+    text-decoration: none;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+
+}
+
+.triangle-l {
+    border-color: transparent rgba(153, 82, 82, 1) transparent transparent;
+    border-style:solid;
+    border-width:15px;
+    height:0px;
+    width:0px;
+    position: relative;
+    left: -30px;
+    top: 95px;
+    z-index: -1; /* displayed under bubble */
+}
+
+.triangle-r {
+    border-color: transparent transparent transparent rgba(153, 82, 82, 1);
+    border-style:solid;
+    border-width:15px;
+    height:0px;
+    width:0px;
+    position: relative;
+    left: 1245px;
+    top: 65px;
+    z-index: -1; /* displayed under bubble */
 }

@@ -11,6 +11,11 @@
         <div class="title">
             <h2>{{ $subcollection->name }}</h2>
         </div>
+        <div class="right-logo-{{ $game->alias }}">
+            <a href="{{ URL::action( 'GameController@index', $game->name ) }}">
+                {{ HTML::image("img/".$game->image, "Logo") }}
+            </a>
+        </div>
         <div class="box">
             <div class="gallery">
 
@@ -21,7 +26,7 @@
 
                     <li>
                         <div class="video-img">
-                            <a href="{{ URL::action( 'VideoController@index', $video->id ) }}">
+                            <a class="image-video" href="{{ URL::action( 'video.show', $video->id ) }}">
                                 <img src="http://img.youtube.com/vi/{{ $video->youtubeId }}/0.jpg" alt="" width="330" height="242" />
                             </a>
                         </div>
@@ -37,11 +42,6 @@
                                         {{ $video->subcollection->name }} &raquo;
                                     </a>
                                     @endif
-                                </div>
-                                <div class="game-logo">
-                                    <a href="{{ URL::action( 'GalleryController@index', $video->game->name ) }}">
-                                        {{ HTML::image("img/".$video->game->image, "Logo") }}
-                                    </a>
                                 </div>
                             </div>
                         </div>

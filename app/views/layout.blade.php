@@ -19,11 +19,25 @@
     <div class="header">
 
         <div class="wrapper">
-            <div class="logo">
+            <div class="rectangle">
+                <div class="logo">
+                    <a href="{{ URL::action( 'HomeController@index' ) }}">
+                        {{ HTML::image("img/logo4.png", "Logo") }}
+                    </a>
+                </div>
+            </div>
+            <div class="triangle-l"></div>
+            <div class="triangle-r"></div>
+            <div class="info">
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <!--<div class="logo">
                 <a href="#">
                     {{ HTML::image("img/logo.png", "Logo") }}
                 </a>
-            </div>
+            </div>-->
             <div class="clear"></div>
             <ul id="menu">
                 <li><a href="{{ URL::action( 'HomeController@index' ) }}">Home</a></li>
@@ -32,7 +46,7 @@
                     <ul>
                         @foreach ( $allGames as $game )
                         <li>
-                            <a href="{{ URL::action( 'GalleryController@index', $game->name ) }}">{{ $game->name }}</a>
+                            <a href="{{ URL::action( 'GameController@index', $game->name ) }}">{{ $game->name }}</a>
                         </li>
                         @endforeach
                     </ul>

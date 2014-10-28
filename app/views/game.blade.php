@@ -5,9 +5,11 @@
 <!-- Left column -->
 <div class="content-left">
 
+    @if ( $collections )
+    @foreach ( $collections as $collection )
     <div class="panel">
         <div class="title">
-            <h2>{{ $subcollection->collection->name }} &nbsp;&nbsp; || &nbsp;&nbsp; {{ $subcollection->name }}</h2>
+            <h2>{{ $collection->name }}</h2>
         </div>
         <div class="right-logo-{{ $game->alias }}">
             <a href="{{ URL::action( 'GameController@index', $game->name ) }}">
@@ -18,9 +20,9 @@
             <div class="gallery">
 
                 <ul>
-                    @if ( $videos )
+                    @if ( $collection->videos )
 
-                    @foreach ( $videos as $video )
+                    @foreach ( $collection->videos as $video )
 
                     <li>
                         <div class="video-img">
@@ -46,34 +48,48 @@
                     </li>
 
                     @endforeach
-
                     @endif
                 </ul>
 
             </div>
         </div>
     </div>
+    @endforeach
+    @endif
 
 </div>
 
 <!-- Right column -->
 <div class="content-right">
 
-    @if ( $subcollections )
+    @if ( $collections )
     <div class="panel">
         <div class="title">
-            <h2>Subcollections</h2>
+            <h2>Collections</h2>
         </div>
         <div class="box">
 
-            @foreach ( $subcollections as $subcollection )
-            <ul>
-                <li>
-                    <a class="viewproject" href="{{ URL::action( 'CollectionController@subcollection', array( $subcollection->collection->name, $subcollection->name ) ) }}">
-                        {{ $subcollection->name }}
-                    </a>
-                </li>
-            </ul>
+            @foreach ( $collections as $collection )
+                <ul>
+                    <li>
+                        <a class="viewproject" href="{{ URL::action( 'CollectionController@index', $collection->name ) }}">
+                            {{ $collection->name }}
+                        </a>
+                    </li>
+                    @if ( $collection->subcollections )
+                        <ul>
+                        @foreach ( $collection->subcollections as $subcollection )
+                            <li>
+                                <a class="viewproject" href="{{ URL::action( 'CollectionController@subcollection', array( $collection->name, $subcollection->name ) ) }}">
+                                    {{ $subcollection->name }}
+                                </a>
+                            </li>
+
+
+                        @endforeach
+                        </ul>
+                    @endif
+                </ul>
             @endforeach
 
         </div>

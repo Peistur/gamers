@@ -6,6 +6,8 @@ class CollectionController extends SharedController {
     {
         $collection = Collection::where( 'name', '=', $collectionName )->first();
 
+        $this->data['game'] = Game::find( $collection->game_id );
+
         if( $collection )
         {
             $this->data['subcollections'] = $this->_getSubcollections( $collection->id );
@@ -23,11 +25,15 @@ class CollectionController extends SharedController {
 
     public function subcollection( $collectionName = null, $subcollectionName = null )
     {
+        $collection = Collection::whereName( $collectionName )->first();
+
+        $this->data['game'] = Game::find( $collection->game_id );
+
         $subcollection = Subcollection::with(
             [
                 'collection'
             ]
-        )->where( 'name', '=', $subcollectionName )->first();
+        )->whereName( $subcollectionName )->whereCollectionId( $collection->id )->first();
 
         if ( $subcollection->collection->name == $collectionName )
         {
