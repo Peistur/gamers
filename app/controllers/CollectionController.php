@@ -14,9 +14,6 @@ class CollectionController extends SharedController {
         }
         else
         {
-            //$data['videos'] = Video::all();
-            //$this->data['collections'] = null;
-
             Redirect::to('home');
         }
 

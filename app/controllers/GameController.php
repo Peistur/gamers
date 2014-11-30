@@ -36,13 +36,13 @@ class GameController extends SharedController {
                         },
                     'subcollections'
                 ]
-            )->where( 'game_id', '=', $game->id )->get();
+            )->where( 'game_id', '=', $game->id )->orderBy('id','desc')->get();
 
             $collections = Collection::with(
                 [
                     'subcollections'
                 ]
-            )->where( 'game_id', '=', $game->id )->get();
+            )->where( 'game_id', '=', $game->id )->orderBy('id','desc')->get();
 
             $i = 0;
 
