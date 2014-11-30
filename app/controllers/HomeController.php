@@ -46,7 +46,7 @@ class HomeController extends SharedController {
 
         foreach( $games as $key => $game )
         {
-            $collections = Collection::whereGameId( $game['id'] )->take(2)->get()->toArray();
+            $collections = Collection::whereGameId( $game['id'] )->take(2)->orderBy('id','desc')->get()->toArray();
 
             $games[$key]['collections'] = $collections;
 
@@ -63,6 +63,12 @@ class HomeController extends SharedController {
         $this->data['games'] = $games;
 
         $this->data['allGames'] = Game::with( 'collections' )->get();
+
+        $this->data['allGames'] = Game::with(array('collections' => function($query)
+            {
+                $query->orderBy('id','desc')->get();
+
+            }))->get();
 
         return View::make( 'home', $this->data );
     }

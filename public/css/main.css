@@ -308,7 +308,7 @@ body {
 .gallery .collection-link {
     position: relative;
     float: left;
-    width: 180px;
+    width: 100%;
 }
 
 .gallery .collection-link a {
