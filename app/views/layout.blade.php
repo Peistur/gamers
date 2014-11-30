@@ -33,7 +33,7 @@
         <div class="wrapper">
             <div class="rectangle">
                 <div class="logo">
-                    <a href="{{ URL::action( 'HomeController@index' ) }}">
+                    <a href="{{ URL::action( 'HomeController@index' ) }}" alt="House Of Gamers">
                         {{ HTML::image("img/logo4.png", "Logo") }}
                     </a>
                 </div>
