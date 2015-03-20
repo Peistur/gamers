@@ -25,8 +25,11 @@ Route::post('video/insert', array( 'as' => 'video.insert', 'uses' => 'VideoContr
 Route::get('video/show/{id}', array( 'as' => 'video.show', 'uses' => 'VideoController@show' ) );
 
 
+Route::get('index', 'IndexController@index');
 
-
+//Route::get('anna', 'AnnaController@index');
+Route::get('anna', array( 'as' => 'anna', 'uses' => 'AnnaController@index' ) );
+Route::post('anna/secondstep', array( 'as' => 'anna.second', 'uses' => 'AnnaController@secondstep' ) );
 
 
 /*
