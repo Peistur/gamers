@@ -8,5 +8,9 @@
 </p>
 
 <p>
+    <img src="https://badpeoplegooddramatv.files.wordpress.com/2015/03/giphy.gif">
+</p>
+
+<p>
     <a href="{{ URL::action( 'anna' ) }}">Tornar enrera</a>
 </p>
