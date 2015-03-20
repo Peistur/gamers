@@ -30,6 +30,7 @@ Route::get('index', 'IndexController@index');
 //Route::get('anna', 'AnnaController@index');
 Route::get('anna', array( 'as' => 'anna', 'uses' => 'AnnaController@index' ) );
 Route::post('anna/secondstep', array( 'as' => 'anna.second', 'uses' => 'AnnaController@secondstep' ) );
+Route::get('anna/regal', array( 'as' => 'regal', 'uses' => 'AnnaController@regal' ) );
 
 
 /*
