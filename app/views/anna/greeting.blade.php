@@ -1,4 +1,8 @@
 
+<h1>
+    Moltes felicitats Anna! 30 anyets!!!
+</h1>
+
 <p>
     <iframe width="980" height="550" src="//www.youtube.com/embed/AyPmuHUkNs4" frameborder="0" allowfullscreen></iframe>
 </p>
@@ -8,5 +12,5 @@
 </p>
 
 <p>
-    <a href="{{ URL::action( 'anna' ) }}">Tornar enrera</a>
+    <a href="{{ URL::action( 'regal' ) }}">Vols més?</a>
 </p>
