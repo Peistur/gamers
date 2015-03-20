@@ -23,6 +23,11 @@ class AnnaController extends SharedController {
 
     }
 
+    public function regal()
+    {
+        return View::make( 'anna.regal' );
+    }
+
 
 
     public function show( $id )
